@@ -63,7 +63,7 @@ export default function Home() {
           </div>
 
           <div id="apps" className="flex scroll-mt-8 md:col-span-7">
-            <BentoCard href="https://phd-tracker-seven.vercel.app">
+            <BentoCard href="https://phdtracker.corporatedropout.in">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-wide text-ink/40">Featured app</span>
                 <div className="flex items-center gap-1.5">

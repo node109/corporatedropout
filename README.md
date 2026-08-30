@@ -7,7 +7,7 @@ media. Static Next.js, no database.
 
 - **Hero** — a one-line intro.
 - **About** — a short bio card next to a featured-app card (currently
-  [PhD Tracker](https://phd-tracker-seven.vercel.app), with a small live-style
+  [PhD Tracker](https://phdtracker.corporatedropout.in), with a small live-style
   preview of its dashboard).
 - **Essays** — a 3-up grid of writing, currently placeholder entries
   (bracketed `[Essay title]` etc.) — swap in real posts as they're written.
@@ -37,10 +37,8 @@ site.
 
 ### About the domain
 
-This is meant to live at the root of `corporatedropout.in`. The PhD Tracker
-app currently occupies that domain — moving it to a subdomain (e.g.
-`phdtracker.corporatedropout.in`) is a separate step to do before pointing
-this site at the root domain, so the tracker doesn't go dark in between.
+This lives at `www.corporatedropout.in` (the root domain). The PhD Tracker
+app was moved to `phdtracker.corporatedropout.in` to make room for it.
 
 ## Tech stack
 
