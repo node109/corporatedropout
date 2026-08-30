@@ -1,0 +1,142 @@
+import { AppPreview } from "@/components/AppPreview";
+import { BentoCard } from "@/components/BentoCard";
+import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { SectionHeading } from "@/components/SectionHeading";
+
+const ESSAYS = [
+  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
+  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
+  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
+];
+
+export default function Home() {
+  return (
+    <main className="mx-auto max-w-6xl px-6 py-12 sm:px-10 sm:py-16 lg:px-24 lg:py-16">
+      <Nav />
+
+      <section className="mt-16 text-center sm:mt-20 lg:mt-[72px]">
+        <h1 className="font-serif mx-auto max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.12]">
+          I build, I write, and sometimes I talk into a{" "}
+          <span className="relative inline-block">
+            microphone
+            <svg
+              width="150"
+              height="12"
+              viewBox="0 0 150 12"
+              fill="none"
+              className="absolute -bottom-1.5 left-0 w-[110px] sm:w-[150px]"
+            >
+              <path
+                d="M2 8C25 2 45 2 55 6C65 10 85 2 95 5C105 8 125 2 148 6"
+                stroke="var(--accent)"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          .
+        </h1>
+        <p className="mx-auto mt-6 max-w-md text-sm leading-7 text-ink/60 sm:text-base">
+          A running index of what I&rsquo;m building, writing, and recording &mdash; updated whenever something&rsquo;s
+          worth sharing.
+        </p>
+      </section>
+
+      <section id="about" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="About" title="A quick word on who's behind this" />
+
+        <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
+          <div className="flex md:col-span-5">
+            <BentoCard className="flex items-center gap-4">
+              <div className="flex h-[76px] w-[76px] flex-shrink-0 items-center justify-center rounded-full bg-accent font-serif text-2xl font-semibold text-bg">
+                S
+              </div>
+              <div>
+                <div className="text-base font-semibold">Hey, I&rsquo;m Sid</div>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
+                  [One or two lines about you &mdash; what you do, what you&rsquo;re into, what you&rsquo;re working
+                  toward.]
+                </p>
+              </div>
+            </BentoCard>
+          </div>
+
+          <div id="apps" className="flex scroll-mt-8 md:col-span-7">
+            <BentoCard href="https://phd-tracker-seven.vercel.app">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-wide text-ink/40">Featured app</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  <span className="text-[11px] font-semibold tracking-wide text-accent">LIVE</span>
+                </div>
+              </div>
+
+              <div className="mt-3.5 flex flex-col gap-6 lg:flex-row lg:items-start">
+                <div className="flex-1">
+                  <div className="text-xl font-semibold sm:text-[22px]">PhD Tracker</div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
+                    An interactive dashboard for tracking PhD applications end to end &mdash; pipeline, contacts,
+                    documents, deadlines.
+                  </p>
+                </div>
+                <AppPreview />
+              </div>
+            </BentoCard>
+          </div>
+        </div>
+      </section>
+
+      <section id="essays" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="Essays" title="Occasional writing, mostly for myself" />
+
+        <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+          {ESSAYS.map((essay, i) => (
+            <BentoCard key={i} href="#" className="!p-0">
+              <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+              </div>
+              <div className="p-5">
+                <div className="text-base font-semibold">{essay.title}</div>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-ink/55">{essay.summary}</p>
+                <div className="mt-3.5 text-xs text-ink/40">{essay.date}</div>
+              </div>
+            </BentoCard>
+          ))}
+        </div>
+      </section>
+
+      <section id="media" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="Media" title="Conversations and recordings" />
+
+        <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
+          <div className="flex md:col-span-7">
+            <BentoCard href="#" className="flex items-center gap-4">
+              <div className="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center rounded-full bg-[#efe6d3]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)">
+                  <path d="M6 4l14 8-14 8V4z" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-[17px] font-semibold">[Episode title]</div>
+                <div className="mt-1 text-[13px] text-ink/55">[Podcast or show name]</div>
+              </div>
+            </BentoCard>
+          </div>
+          <div className="flex md:col-span-5">
+            <BentoCard dashed>
+              <span className="text-[13px] italic text-ink/40">More episodes &mdash; coming soon</span>
+            </BentoCard>
+          </div>
+        </div>
+      </section>
+
+      <div className="mt-16 sm:mt-20 lg:mt-24">
+        <Footer />
+      </div>
+    </main>
+  );
+}

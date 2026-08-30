@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f4ef;
+  --card-border: #e3ded4;
+  --ink: #221d14;
+  --accent: #b9862e;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card-border: var(--card-border);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
