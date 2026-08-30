@@ -6,16 +6,19 @@ interface BentoCardProps {
   href?: string;
   className?: string;
   dashed?: boolean;
+  hoverEffect?: boolean;
 }
 
-export function BentoCard({ children, href, className = "", dashed = false }: BentoCardProps) {
+export function BentoCard({ children, href, className = "", dashed = false, hoverEffect = true }: BentoCardProps) {
   const base = dashed
     ? "flex w-full items-center justify-center rounded-2xl border border-dashed border-[#d8cbae] p-6"
-    : "group relative w-full overflow-hidden rounded-2xl border border-card-border p-6 transition-colors duration-200 hover:bg-white hover:border-accent/40";
+    : `group relative w-full overflow-hidden rounded-2xl border border-card-border p-6 ${
+        hoverEffect ? "transition-colors duration-200 hover:bg-white hover:border-accent/40" : ""
+      }`;
 
   const content = (
     <>
-      {!dashed && (
+      {!dashed && hoverEffect && (
         <span
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"

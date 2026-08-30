@@ -114,21 +114,18 @@ export default function Home() {
 
         <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
           <div className="flex md:col-span-7">
-            <BentoCard href="#" className="flex items-center gap-4">
-              <div className="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center rounded-full bg-[#efe6d3]">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)">
-                  <path d="M6 4l14 8-14 8V4z" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-[17px] font-semibold">[Episode title]</div>
-                <div className="mt-1 text-[13px] text-ink/55">[Podcast or show name]</div>
+            <BentoCard hoverEffect={false} className="!p-0">
+              <video className="block w-full" controls preload="metadata" playsInline poster="/videos/hi-sid-poster.jpg">
+                <source src="/videos/hi-sid.mp4" type="video/mp4" />
+              </video>
+              <div className="p-5">
+                <div className="text-[17px] font-semibold">hi! this is sid ^_^</div>
               </div>
             </BentoCard>
           </div>
           <div className="flex md:col-span-5">
             <BentoCard dashed>
-              <span className="text-[13px] italic text-ink/40">More episodes &mdash; coming soon</span>
+              <span className="text-[13px] italic text-ink/40">More recordings &mdash; coming soon</span>
             </BentoCard>
           </div>
         </div>
