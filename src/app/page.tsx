@@ -87,28 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="essays" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Essays" title="Occasional writing, mostly for myself" />
-
-        <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-          {ESSAYS.map((essay, i) => (
-            <BentoCard key={i} href="#" className="!p-0">
-              <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                </svg>
-              </div>
-              <div className="p-5">
-                <div className="text-base font-semibold">{essay.title}</div>
-                <p className="mt-1.5 text-[13px] leading-relaxed text-ink/55">{essay.summary}</p>
-                <div className="mt-3.5 text-xs text-ink/40">{essay.date}</div>
-              </div>
-            </BentoCard>
-          ))}
-        </div>
-      </section>
-
       <section id="media" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
         <SectionHeading eyebrow="Media" title="Conversations and recordings" />
 
@@ -128,6 +106,28 @@ export default function Home() {
               <span className="text-[13px] italic text-ink/40">More recordings &mdash; coming soon</span>
             </BentoCard>
           </div>
+        </div>
+      </section>
+
+      <section id="essays" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="Essays" title="Occasional writing, mostly for myself" />
+
+        <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+          {ESSAYS.map((essay, i) => (
+            <BentoCard key={i} href="#" className="!p-0">
+              <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+              </div>
+              <div className="p-5">
+                <div className="text-base font-semibold">{essay.title}</div>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-ink/55">{essay.summary}</p>
+                <div className="mt-3.5 text-xs text-ink/40">{essay.date}</div>
+              </div>
+            </BentoCard>
+          ))}
         </div>
       </section>
 
