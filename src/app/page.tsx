@@ -174,7 +174,10 @@ export default function Home() {
       </section>
 
       <section id="socials" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Socials Corner" title="Bits worth keeping from elsewhere" />
+        <SectionHeading
+          eyebrow="Socials Corner"
+          title="sometimes while scrolling, i stop and leave digital evidence for the algorithm !"
+        />
 
         <div className="mt-9 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:thin] sm:snap-x sm:snap-mandatory">
           {SOCIAL_HIGHLIGHTS.map((highlight, i) => (
