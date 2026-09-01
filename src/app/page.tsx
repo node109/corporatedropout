@@ -96,7 +96,7 @@ export default function Home() {
                 className="h-[76px] w-[76px] flex-shrink-0 rounded-full object-cover"
               />
               <div>
-                <div className="text-base font-semibold">Hey, I&rsquo;m Sid</div>
+                <div className="text-base font-semibold">psst !</div>
                 <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-ink/60">
                   {"this is a sid space.\nyou will find no coherence.\ntell me, how is life?"}
                 </p>
