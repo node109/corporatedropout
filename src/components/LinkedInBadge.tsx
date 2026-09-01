@@ -19,7 +19,7 @@ export function LinkedInBadge() {
           Siddhant Singh
         </a>
       </div>
-      <Script src="https://platform.linkedin.com/badges/js/profile.js" strategy="lazyOnload" />
+      <Script src="https://platform.linkedin.com/badges/js/profile.js" strategy="afterInteractive" />
     </div>
   );
 }
