@@ -38,7 +38,12 @@ export function SocialCard({ highlight }: { highlight: SocialHighlight }) {
         {highlight.images.map((image, i) =>
           image.src ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={i} src={image.src} alt={image.label} className="h-[150px] w-full flex-none object-cover" />
+            <img
+              key={i}
+              src={image.src}
+              alt={image.label}
+              className="h-[150px] w-full flex-none object-cover object-top"
+            />
           ) : (
             <div
               key={i}

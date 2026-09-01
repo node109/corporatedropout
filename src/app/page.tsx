@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialCard, type SocialHighlight } from "@/components/SocialCard";
+import { LinkedInBadge } from "@/components/LinkedInBadge";
 
 const ESSAYS = [
   { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
@@ -178,6 +179,10 @@ export default function Home() {
           eyebrow="Socials Corner"
           title="sometimes while scrolling, i stop and leave digital evidence for the algorithm !"
         />
+
+        <div className="mt-9">
+          <LinkedInBadge />
+        </div>
 
         <div className="mt-9 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:thin] sm:snap-x sm:snap-mandatory">
           {SOCIAL_HIGHLIGHTS.map((highlight, i) => (
