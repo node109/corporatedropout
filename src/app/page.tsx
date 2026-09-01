@@ -40,6 +40,14 @@ const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
     linkLabel: "View post on LinkedIn",
     images: [{ src: "/socials/linkedin-guest-lecture-feature.jpg", label: "LinkedIn post screenshot" }],
   },
+  {
+    platform: "linkedin",
+    caption:
+      "On skill-training funding: link it directly to actual employment outcomes. As a country we should only be fighting one problem — unemployment or a lack of skilled workers — not both at once.",
+    date: "2024",
+    href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7104095033779269632?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7104095033779269632%2C7106490016247296000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287106490016247296000%2Curn%3Ali%3AugcPost%3A7104095033779269632%29",
+    images: [{ src: "/socials/linkedin-skilling-ecosystem-comment.jpg", label: "LinkedIn comment screenshot" }],
+  },
 ];
 
 export default function Home() {
