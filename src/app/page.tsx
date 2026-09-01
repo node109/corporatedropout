@@ -24,11 +24,12 @@ const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
     images: [{ src: "/socials/linkedin-funding-comment.jpg", label: "LinkedIn comment screenshot" }],
   },
   {
-    platform: "x",
-    caption: "[What this post was about]",
-    date: "[Month Year]",
-    href: "https://x.com/",
-    images: [{ label: "Screenshot" }],
+    platform: "linkedin",
+    caption:
+      "Exam leaks aren't really about the nature of the questions — they're about every student getting access to the paper at the exact same moment. Computer-based exams have helped a lot there, but assessing real aptitude is a separate, deeper problem.",
+    date: "August 2026",
+    href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7487505830079152128?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7487505830079152128%2C7487824426357374976%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287487824426357374976%2Curn%3Ali%3AugcPost%3A7487505830079152128%29",
+    images: [{ src: "/socials/linkedin-exam-leaks-comment.jpg", label: "LinkedIn comment screenshot" }],
   },
   {
     platform: "linkedin",
