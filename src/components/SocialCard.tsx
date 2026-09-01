@@ -36,10 +36,7 @@ const PLATFORM_LABEL: Record<SocialPlatform, string> = { linkedin: "LinkedIn", x
 
 export function SocialCard({ highlight }: { highlight: SocialHighlight }) {
   return (
-    <BentoCard
-      href={highlight.href}
-      className="w-[270px] flex-none snap-start !p-0 sm:w-[300px]"
-    >
+    <BentoCard hoverEffect={false} className="w-[270px] flex-none snap-start !p-0 sm:w-[300px]">
       <div className="flex gap-[3px] overflow-x-auto">
         {highlight.images.map((image, i) =>
           image.src ? (
@@ -55,6 +52,14 @@ export function SocialCard({ highlight }: { highlight: SocialHighlight }) {
           )
         )}
       </div>
+      <a
+        href={highlight.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block border-b border-card-border px-5 py-2 text-xs font-medium text-accent hover:underline"
+      >
+        View {highlight.images.length > 1 ? "thread" : "comment"} on {PLATFORM_LABEL[highlight.platform]} ↗
+      </a>
       <div className="p-5">
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
