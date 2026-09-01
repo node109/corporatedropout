@@ -184,7 +184,15 @@ export default function Home() {
           <LinkedInBadge />
         </div>
 
-        <div className="mt-9 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:thin] sm:snap-x sm:snap-mandatory">
+        <div className="mt-9 flex items-center justify-end gap-1.5 text-xs text-ink/40">
+          is it swipe / is it scroll
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M5 12h14" />
+            <path d="m13 6 6 6-6 6" />
+          </svg>
+        </div>
+
+        <div className="mt-2 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:thin] sm:snap-x sm:snap-mandatory">
           {SOCIAL_HIGHLIGHTS.map((highlight, i) => (
             <SocialCard key={i} highlight={highlight} />
           ))}
