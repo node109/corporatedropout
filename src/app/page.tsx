@@ -3,11 +3,39 @@ import { BentoCard } from "@/components/BentoCard";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
+import { SocialCard, type SocialHighlight } from "@/components/SocialCard";
 
 const ESSAYS = [
   { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
   { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
   { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
+];
+
+// Placeholder entries until the capture extension feeds real screenshots in.
+// Each highlight can hold more than one image, for when a comment thread
+// runs long enough to need a few screenshots.
+const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
+  {
+    platform: "linkedin",
+    caption: "[What this post or comment thread was about]",
+    date: "[Month Year]",
+    href: "https://www.linkedin.com/in/",
+    images: [{ label: "Screenshot" }],
+  },
+  {
+    platform: "x",
+    caption: "[What this post was about]",
+    date: "[Month Year]",
+    href: "https://x.com/",
+    images: [{ label: "Screenshot" }],
+  },
+  {
+    platform: "linkedin",
+    caption: "[A longer comment thread — spans a few screenshots]",
+    date: "[Month Year]",
+    href: "https://www.linkedin.com/in/",
+    images: [{ label: "Screenshot 1" }, { label: "Screenshot 2" }, { label: "Screenshot 3" }],
+  },
 ];
 
 export default function Home() {
@@ -127,6 +155,16 @@ export default function Home() {
                 <div className="mt-3.5 text-xs text-ink/40">{essay.date}</div>
               </div>
             </BentoCard>
+          ))}
+        </div>
+      </section>
+
+      <section id="socials" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="Socials Corner" title="Bits worth keeping from elsewhere" />
+
+        <div className="mt-9 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:thin] sm:snap-x sm:snap-mandatory">
+          {SOCIAL_HIGHLIGHTS.map((highlight, i) => (
+            <SocialCard key={i} highlight={highlight} />
           ))}
         </div>
       </section>

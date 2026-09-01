@@ -2,6 +2,7 @@ const LINKS = [
   { href: "#apps", label: "Apps" },
   { href: "#media", label: "Media" },
   { href: "#essays", label: "Essays" },
+  { href: "#socials", label: "Socials" },
   { href: "#about", label: "About" },
 ];
 
