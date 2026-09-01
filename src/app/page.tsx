@@ -5,12 +5,7 @@ import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialCard, type SocialHighlight } from "@/components/SocialCard";
 import { LinkedInBadge } from "@/components/LinkedInBadge";
-
-const ESSAYS = [
-  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
-  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
-  { title: "[Essay title]", summary: "[One-line summary of what this essay is about.]", date: "[Month Year]" },
-];
+import { ESSAYS } from "@/lib/essays";
 
 // Placeholder entries until the capture extension feeds real screenshots in.
 // Each highlight can hold more than one image, for when a comment thread
@@ -156,8 +151,8 @@ export default function Home() {
         <SectionHeading eyebrow="Essays" title="Occasional writing, mostly for myself" />
 
         <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-          {ESSAYS.map((essay, i) => (
-            <BentoCard key={i} href="#" className="!p-0">
+          {ESSAYS.map((essay) => (
+            <BentoCard key={essay.slug} href={`/essays/${essay.slug}`} className="!p-0">
               <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
