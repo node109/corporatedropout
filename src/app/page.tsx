@@ -89,14 +89,16 @@ export default function Home() {
         <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
           <div className="flex md:col-span-5">
             <BentoCard className="flex items-center gap-4">
-              <div className="flex h-[76px] w-[76px] flex-shrink-0 items-center justify-center rounded-full bg-accent font-serif text-2xl font-semibold text-bg">
-                S
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hello-doodle.jpg"
+                alt="A hand-drawn ink sketch saying hello"
+                className="h-[76px] w-[76px] flex-shrink-0 rounded-full object-cover"
+              />
               <div>
                 <div className="text-base font-semibold">Hey, I&rsquo;m Sid</div>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
-                  [One or two lines about you &mdash; what you do, what you&rsquo;re into, what you&rsquo;re working
-                  toward.]
+                <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-ink/60">
+                  {"this is a sid space.\nyou will find no coherence.\ntell me, how is life?"}
                 </p>
               </div>
             </BentoCard>
