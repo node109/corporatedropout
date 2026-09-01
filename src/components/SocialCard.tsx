@@ -17,6 +17,10 @@ export interface SocialHighlight {
   date: string;
   href: string;
   images: SocialImage[];
+  // Overrides the auto "View comment/thread on <platform>" link text — for
+  // entries that aren't your own comment (e.g. someone else's post that
+  // features or mentions you).
+  linkLabel?: string;
 }
 
 const PLATFORM_ICON: Record<SocialPlatform, ReactNode> = {
@@ -58,7 +62,9 @@ export function SocialCard({ highlight }: { highlight: SocialHighlight }) {
         rel="noopener noreferrer"
         className="block border-b border-card-border px-5 py-2 text-xs font-medium text-accent hover:underline"
       >
-        View {highlight.images.length > 1 ? "thread" : "comment"} on {PLATFORM_LABEL[highlight.platform]} ↗
+        {highlight.linkLabel ??
+          `View ${highlight.images.length > 1 ? "thread" : "comment"} on ${PLATFORM_LABEL[highlight.platform]}`}{" "}
+        ↗
       </a>
       <div className="p-5">
         <div className="flex items-center justify-between">

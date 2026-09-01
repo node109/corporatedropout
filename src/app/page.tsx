@@ -33,10 +33,12 @@ const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
   },
   {
     platform: "linkedin",
-    caption: "[A longer comment thread — spans a few screenshots]",
-    date: "[Month Year]",
-    href: "https://www.linkedin.com/in/",
-    images: [{ label: "Screenshot 1" }, { label: "Screenshot 2" }, { label: "Screenshot 3" }],
+    caption:
+      "Guest lecture for Frontier Tech Learners on how data analysts help construction companies grow — moderated by Pravin Kumar Shaw.",
+    date: "March 2025",
+    href: "https://www.linkedin.com/posts/its-pravin-kumar_datascience-careerinsights-guestlecture-ugcPost-7309117420072247296-7zKU",
+    linkLabel: "View post on LinkedIn",
+    images: [{ src: "/socials/linkedin-guest-lecture-feature.jpg", label: "LinkedIn post screenshot" }],
   },
 ];
 
