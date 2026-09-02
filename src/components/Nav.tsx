@@ -1,7 +1,6 @@
 const LINKS = [
   { href: "#apps", label: "Apps" },
-  { href: "#media", label: "Media" },
-  { href: "#writing", label: "Writing" },
+  { href: "#media", label: "Conversations" },
   { href: "#socials", label: "Socials" },
   { href: "#about", label: "About" },
 ];

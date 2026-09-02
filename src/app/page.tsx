@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialCard, type SocialHighlight } from "@/components/SocialCard";
-import { LinkedInBadge } from "@/components/LinkedInBadge";
 import { ESSAYS } from "@/lib/essays";
 
 // Placeholder entries until the capture extension feeds real screenshots in.
@@ -96,9 +95,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="About" title="A quick word on who's behind this" />
-
-        <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-2.5 md:grid-cols-12">
           <div className="flex md:col-span-5">
             <BentoCard className="flex items-center gap-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -142,7 +139,7 @@ export default function Home() {
       </section>
 
       <section id="media" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Media" title="Conversations" />
+        <SectionHeading title="Conversations" />
 
         <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12 md:items-stretch">
           <div className="flex md:col-span-7">
@@ -175,13 +172,13 @@ export default function Home() {
       </section>
 
       <section id="socials" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading
-          eyebrow="Socials Corner"
-          title="sometimes while scrolling, i stop and leave digital evidence for the algorithm !"
-        />
-
-        <div className="mt-9">
-          <LinkedInBadge />
+        <div className="text-center">
+          <h2 className="mx-auto max-w-lg text-2xl font-medium leading-tight tracking-tight sm:text-3xl md:text-[34px]">
+            Socials Corner
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-sm text-ink/50">
+            sometimes while scrolling, i stop and leave digital evidence for the algorithm !
+          </p>
         </div>
 
         <div className="mt-9 flex items-center justify-end gap-1.5 text-xs text-ink/40">
