@@ -17,7 +17,11 @@ const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
       "On a mentor's advice from working with the J&K government: it's better to spend and reach some of the people who need it than let hesitation guarantee zero impact.",
     date: "September 2026",
     href: "https://www.linkedin.com/feed/update/urn:li:activity:7500531621691863041?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500531621691863041%2C7500613576307474432%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500613576307474432%2Curn%3Ali%3Aactivity%3A7500531621691863041%29",
-    images: [{ src: "/socials/linkedin-funding-comment.jpg", label: "LinkedIn comment screenshot" }],
+    images: [
+      { src: "/socials/linkedin-funding-comment.jpg", label: "LinkedIn comment screenshot" },
+      { src: "/socials/linkedin-funding-reply-1.jpg", label: "LinkedIn reply screenshot" },
+      { src: "/socials/linkedin-funding-reply-2.jpg", label: "LinkedIn reply screenshot" },
+    ],
   },
   {
     platform: "linkedin",
