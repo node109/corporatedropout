@@ -74,8 +74,7 @@ export function SocialCard({ highlight }: { highlight: SocialHighlight }) {
             <span className="text-[11px] text-ink/40">{highlight.images.length} screenshots</span>
           )}
         </div>
-        <p className="mt-2.5 text-sm leading-relaxed text-ink/70">{highlight.caption}</p>
-        <div className="mt-3.5 text-xs text-ink/40">{highlight.date}</div>
+        <div className="mt-2.5 text-xs text-ink/40">{highlight.date}</div>
       </div>
     </BentoCard>
   );
