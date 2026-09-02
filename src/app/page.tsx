@@ -17,11 +17,23 @@ const SOCIAL_HIGHLIGHTS: SocialHighlight[] = [
       "On a mentor's advice from working with the J&K government: it's better to spend and reach some of the people who need it than let hesitation guarantee zero impact.",
     date: "September 2026",
     href: "https://www.linkedin.com/feed/update/urn:li:activity:7500531621691863041?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7500531621691863041%2C7500613576307474432%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500613576307474432%2Curn%3Ali%3Aactivity%3A7500531621691863041%29",
-    images: [
-      { src: "/socials/linkedin-funding-comment.jpg", label: "LinkedIn comment screenshot" },
-      { src: "/socials/linkedin-funding-reply-1.jpg", label: "LinkedIn reply screenshot" },
-      { src: "/socials/linkedin-funding-reply-2.jpg", label: "LinkedIn reply screenshot" },
-    ],
+    images: [{ src: "/socials/linkedin-funding-comment.jpg", label: "LinkedIn comment screenshot" }],
+  },
+  {
+    platform: "linkedin",
+    caption:
+      "Replying on the same thread: it's not planning an SOP that falls short, it's staying true to it in execution — sometimes following it exactly still means zero spend, if no one qualifies.",
+    date: "September 2026",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7500531621691863041/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500613576307474432%2Curn%3Ali%3Aactivity%3A7500531621691863041%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500854521926103040%2Curn%3Ali%3Aactivity%3A7500531621691863041%29",
+    images: [{ src: "/socials/linkedin-funding-reply-1.jpg", label: "LinkedIn reply screenshot" }],
+  },
+  {
+    platform: "linkedin",
+    caption:
+      "Closing the thread with the gap between SOP compliance on paper and its practical execution — and a line from X: \"Planning without execution is bureaucracy.\"",
+    date: "September 2026",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7500531621691863041/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287500613576307474432%2Curn%3Ali%3Aactivity%3A7500531621691863041%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287500854654671482880%2Curn%3Ali%3Aactivity%3A7500531621691863041%29",
+    images: [{ src: "/socials/linkedin-funding-reply-2.jpg", label: "LinkedIn reply screenshot" }],
   },
   {
     platform: "linkedin",
@@ -56,7 +68,7 @@ export default function Home() {
       <Nav />
 
       <section className="mt-16 text-center sm:mt-20 lg:mt-[72px]">
-        <h1 className="font-serif mx-auto max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.12]">
+        <h1 className="font-serif mx-auto max-w-2xl text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl lg:leading-[1.15]">
           I build, I write, and sometimes I start talking and don&rsquo;t{" "}
           <span className="relative inline-block">
             stop
@@ -130,9 +142,9 @@ export default function Home() {
       </section>
 
       <section id="media" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Media" title="Conversations and recordings" />
+        <SectionHeading eyebrow="Media" title="Conversations" />
 
-        <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12">
+        <div className="mt-9 grid grid-cols-1 gap-2.5 md:grid-cols-12 md:items-stretch">
           <div className="flex md:col-span-7">
             <BentoCard hoverEffect={false} className="!p-0">
               <video className="block w-full" controls preload="metadata" playsInline poster="/videos/hi-sid-poster.jpg">
@@ -143,33 +155,22 @@ export default function Home() {
               </div>
             </BentoCard>
           </div>
-          <div className="flex md:col-span-5">
-            <BentoCard dashed>
-              <span className="text-[13px] italic text-ink/40">More recordings &mdash; coming soon</span>
-            </BentoCard>
+
+          <div id="writing" className="flex scroll-mt-8 md:col-span-5">
+            <div className="flex w-full flex-col gap-2.5">
+              {ESSAYS.map((essay) => (
+                <BentoCard
+                  key={essay.slug}
+                  href={`/writing/${essay.slug}`}
+                  className="!p-4 flex flex-1 flex-col justify-center"
+                >
+                  <div className="text-sm font-semibold">{essay.title}</div>
+                  <p className="mt-1 text-xs leading-relaxed text-ink/55">{essay.summary}</p>
+                  <div className="mt-2 text-[11px] text-ink/40">{essay.date}</div>
+                </BentoCard>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="writing" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Writing" title="Occasional writing, mostly for myself" />
-
-        <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-          {ESSAYS.map((essay) => (
-            <BentoCard key={essay.slug} href={`/writing/${essay.slug}`} className="!p-0">
-              <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                </svg>
-              </div>
-              <div className="p-5">
-                <div className="text-base font-semibold">{essay.title}</div>
-                <p className="mt-1.5 text-[13px] leading-relaxed text-ink/55">{essay.summary}</p>
-                <div className="mt-3.5 text-xs text-ink/40">{essay.date}</div>
-              </div>
-            </BentoCard>
-          ))}
         </div>
       </section>
 
