@@ -18,7 +18,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "@stillsid",
-  description: "Apps, essays, and media — a running index of what I'm building, writing, and recording.",
+  description: "Apps, writing, and media — a running index of what I'm building, writing, and recording.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

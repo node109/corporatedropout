@@ -7,21 +7,21 @@ export function generateStaticParams() {
   return ESSAYS.map((essay) => ({ slug: essay.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/essays/[slug]">) {
+export async function generateMetadata({ params }: PageProps<"/writing/[slug]">) {
   const { slug } = await params;
   const essay = ESSAYS.find((e) => e.slug === slug);
   return { title: essay ? `${essay.title} — @stillsid` : "Essay" };
 }
 
-export default async function EssayPage({ params }: PageProps<"/essays/[slug]">) {
+export default async function EssayPage({ params }: PageProps<"/writing/[slug]">) {
   const { slug } = await params;
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) notFound();
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 sm:px-10 sm:py-16 lg:px-24 lg:py-16">
-      <Link href="/#essays" className="text-xs font-medium text-ink/50 hover:text-ink">
-        ← Back to essays
+      <Link href="/#writing" className="text-xs font-medium text-ink/50 hover:text-ink">
+        ← Back to writing
       </Link>
 
       <article className="mx-auto mt-8 max-w-2xl">

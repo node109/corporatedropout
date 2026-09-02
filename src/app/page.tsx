@@ -147,12 +147,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="essays" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
-        <SectionHeading eyebrow="Essays" title="Occasional writing, mostly for myself" />
+      <section id="writing" className="mt-16 scroll-mt-8 sm:mt-20 lg:mt-[88px]">
+        <SectionHeading eyebrow="Writing" title="Occasional writing, mostly for myself" />
 
         <div className="mt-9 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
           {ESSAYS.map((essay) => (
-            <BentoCard key={essay.slug} href={`/essays/${essay.slug}`} className="!p-0">
+            <BentoCard key={essay.slug} href={`/writing/${essay.slug}`} className="!p-0">
               <div className="flex h-[120px] items-center justify-center bg-[#efe6d3]">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
